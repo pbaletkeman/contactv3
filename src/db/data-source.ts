@@ -11,8 +11,8 @@ export const AppDataSource = new DataSource({
   password: "pete",
   database: "pete",
   synchronize: true,
-  logging: false,
   entities: [Address, Contact],
   migrations: [],
   subscribers: [],
+  // logging: ["query"],
 });

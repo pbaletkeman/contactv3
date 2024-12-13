@@ -1,0 +1,82 @@
+PUT/UPDATE
+
+curl --location --request PUT 'http://localhost:4000/contact/v3/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "contactId":1,
+   "birthDate":"2024-11-30",
+   "firstName":"fname",
+   "lastName":"lname",
+   "middleName":"mname",
+   "addresses":[
+      {
+         "addressId":2,
+         "country":"USA",
+         "title":null,
+         "postalCode":"postal0",
+         "phone":"phone10",
+         "province":"pro0",
+         "city":"ncity0",
+         "street1":"str10",
+         "street2":"str20",
+         "email":"p@ss.com0"
+      },
+      {
+         "addressId":1,
+         "country":"Canada",
+         "title":null,
+         "postalCode":"postal",
+         "phone":"phone1",
+         "province":"prov",
+         "city":"ncity",
+         "street1":"str1",
+         "street2":"str2",
+         "email":"p@ss.com"
+      },
+      {
+         "country":"Canada",
+         "title":null,
+         "postalCode":"postal4",
+         "phone":"phone4",
+         "province":"prv",
+         "city":"ncit4",
+         "street1":"str4",
+         "street2":"str4",
+         "email":"p4@ss.com"
+      }
+   ]
+}'
+=====================================
+POST/Insert 
+
+curl --location 'http://localhost:4000/contact/v3' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "firstName":"fname",
+   "lastName":"lname",
+   "middleName":"mname",
+   "birthDate":"2024-11-30",
+   "title":"mr",
+   "addresses":[
+      {
+         "street1":"str1",
+         "street2":"str2",
+         "city":"ncity",
+         "province":"prov",
+         "postalCode":"postal",
+         "country":"Canada",
+         "phone":"phone1",
+         "email":"p@ss.com"
+      },
+      {
+         "street1":"str10",
+         "street2":"str20",
+         "city":"ncity0",
+         "province":"pro0",
+         "postalCode":"postal0",
+         "country":"USA",
+         "phone":"phone10",
+         "email":"p@ss.com0"
+      }
+   ]
+}'

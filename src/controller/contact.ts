@@ -21,6 +21,12 @@ const addressRepository = AppDataSource.getRepository(Address);
 // create application/json parser
 var jsonParser = bodyParser.json();
 
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  res.send(await contactRepository.delete(id));
+});
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
